@@ -5,9 +5,9 @@ of the list element to red.*/
 
 const strawberry=(html)=>{
 
-document.getElementById("berry").style.backgroundColor = "red";
-  console.log(html);
-  console.log(document.getElementById('berry'));
+  console.log(document.getElementById("berry"));
+  document.getElementById("berry").style.backgroundColor = "red";
+  console.log(`I found the berry: ${document.getElementById('berry').innerHTML}`);
 };
 
 strawberry();
@@ -20,12 +20,16 @@ const orange=(html)=>{
 document.querySelector('li[data-foodtype]').style.backgroundColor="orange";
 };
 
+console.log(document.querySelector('li[data-foodtype]'));
+console.log(`I found the fruit: ${document.querySelector('li[data-foodtype]').innerHTML}`);
+
 orange();
 
 /*Use getElementsByTagName() to return a collection of all the <li>elements in
 the document. Use console.log to see that it is a HTMLCollection with 6 child
 elements. Study the HTMLCollection.*/
 console.log(document.getElementsByTagName("li"));
+
 
 
 
